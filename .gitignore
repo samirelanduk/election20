@@ -1,0 +1,8 @@
+secrets.py
+data.json
+*.pyc
+__pycache__
+.DS_Store
+*.sqlite3
+*.css*
+data.txt

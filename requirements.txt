@@ -1,0 +1,13 @@
+django==2.2.8
+requests
+beautifulsoup4
+django-compressor
+six
+
+libsass
+django-sass-processor
+rjsmin
+rcssmin
+
+
+
