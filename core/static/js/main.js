@@ -1,13 +1,8 @@
 var lookup = {
-    "Conservative": "#0575c9",
-    "Labour": "#df1d0e",
-    "Liberal Democrat": "#efac18",
-    "Scottish National Party": "#f8ed2e",
-    "Green": "#5fb25f",
-    "The Brexit Party": "#02b6d7",
-    "Plaid Cymru": "#13e594",
-    "Democratic Unionist Party": "#b51c4b",
-    "Sinn F\u00e9in": "#159b78",
+    "Republicans": "#DE0101",
+    "Democrats": "#3333FF",
+    "Libertarians": "#DCB732",
+    "Greens": "#5fb25f",
     "Other": "#999999"
 }
 
@@ -40,10 +35,8 @@ function summariseData(dataObj) {
      */
 
     var parties = {
-        "Labour": 0, "Conservative": 0, "Liberal Democrat": 0,
-        "Scottish National Party": 0, "The Brexit Party": 0, "Green": 0,
-        "Democratic Unionist Party": 0, "Sinn F\u00e9in": 0,
-        "Plaid Cymru": 0, "Other": 0
+        "Democrats": 0, "Republicans": 0,
+        "Libertarians": 0, "Greens": 0, "Other": 0
     }
     var summary = {
         "seats": {...parties}, "votes": {...parties}, "result": "ss"
@@ -108,10 +101,7 @@ function updateLink(rules) {
      */
 
     parties = {
-        "Conservative": "con", "Labour": "lab", "Liberal Democrat": "ld",
-        "Green": "green", "Scottish National Party": "snp",
-        "The Brexit Party": "bp", "Democratic Unionist Party": "dup",
-        "Sinn Féin": "sf", "Plaid Cymru": "pc"
+        "Republicans": "R", "Democrats": "D", "Libertarians": "L", "Greens": "G"
     }
     regions = {
         "England": "eng", "Scotland": "sco", "Wales": "wal", "Northern Ireland": "ni"
@@ -265,9 +255,7 @@ function changeParty(delta) {
      */
 
     var parties = [
-        "All Parties", "Conservative", "Labour", "Liberal Democrat",
-        "Scottish National Party", "Green", "The Brexit Party",
-        "Democratic Unionist Party", "Sinn Féin", "Plaid Cymru"
+        "All Parties", "Republicans", "Democrats", "Libertarians", "Greens"
     ]
     var selector = document.getElementsByClassName("party-selector").item(0);
     var text = selector.getElementsByTagName("span").item(0);

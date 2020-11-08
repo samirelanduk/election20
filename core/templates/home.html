@@ -45,15 +45,10 @@
                         If <input value="{{ rule.0 }}" type="number" min="0" max="100" oninput="applyRules();" class="pc">% of
                         <select onchange="applyRules();">
                             <option></option>
-                            <option{% if rule.1 == 'Conservative'%} selected{% endif %}>Conservative</option>
-                            <option{% if rule.1 == 'Labour'%} selected{% endif %}>Labour</option>
-                            <option{% if rule.1 == 'Liberal Democrat'%} selected{% endif %}>Liberal Democrat</option>
-                            <option{% if rule.1 == 'Scottish National Party'%} selected{% endif %}>Scottish National Party</option>
-                            <option{% if rule.1 == 'Green'%} selected{% endif %}>Green</option>
-                            <option{% if rule.1 == 'The Brexit Party'%} selected{% endif %}>The Brexit Party</option>
-                            <option{% if rule.1 == 'Plaid Cymru'%} selected{% endif %}>Plaid Cymru</option>
-                            <option{% if rule.1 == 'Democratic Unionist Party'%} selected{% endif %}>Democratic Unionist Party</option>
-                            <option{% if rule.1 == 'Sinn Féin'%} selected{% endif %}>Sinn Féin</option>
+                            <option{% if rule.1 == 'Democrat'%} selected{% endif %}>Democrat</option>
+                            <option{% if rule.1 == 'Republican'%} selected{% endif %}>Republican</option>
+                            <option{% if rule.1 == 'Libertarians'%} selected{% endif %}>Libertarians</option>
+                            <option{% if rule.1 == 'Greens'%} selected{% endif %}>Greens</option>
                         </select> voters in
                         <select class="region-select" onchange="applyRules();" value="{{ rule.2 }}">
                             <option{% if rule.2 == 'The whole UK'%} selected{% endif %}>The whole UK</option>
@@ -65,15 +60,10 @@
                     </div><div class="rule2">voted for
                         <select onchange="applyRules();">
                             <option></option>
-                            <option{% if rule.3 == 'Conservative'%} selected{% endif %}>Conservative</option>
-                            <option{% if rule.3 == 'Labour'%} selected{% endif %}>Labour</option>
-                            <option{% if rule.3 == 'Liberal Democrat'%} selected{% endif %}>Liberal Democrat</option>
-                            <option{% if rule.3 == 'Scottish National Party'%} selected{% endif %}>Scottish National Party</option>
-                            <option{% if rule.3 == 'Green'%} selected{% endif %}>Green</option>
-                            <option{% if rule.3 == 'The Brexit Party'%} selected{% endif %}>The Brexit Party</option>
-                            <option{% if rule.3 == 'Plaid Cymru'%} selected{% endif %}>Plaid Cymru</option>
-                            <option{% if rule.3 == 'Democratic Unionist Party'%} selected{% endif %}>Democratic Unionist Party</option>
-                            <option{% if rule.3 == 'Sinn Féin'%} selected{% endif %}>Sinn Féin</option>
+                            <option{% if rule.3 == 'Democrat'%} selected{% endif %}>Democrat</option>
+                            <option{% if rule.3 == 'Republican'%} selected{% endif %}>Republican</option>
+                            <option{% if rule.3 == 'Libertarians'%} selected{% endif %}>Libertarians</option>
+                            <option{% if rule.3 == 'Greens'%} selected{% endif %}>Greens</option>
                         </select>
                         <button onclick="addRule();">and...</button>
                     </div>
@@ -92,39 +82,19 @@
                     <h2>Seat Share</h2>
                     <table id="seatsTable">
                         <tr>
-                            <td>Conservative</td>
+                            <td>Democrats</td>
                             <td><div class="data"><div class="bar"></div><span></span></div>
                         </tr>
                         <tr>
-                            <td>Labour</td>
+                            <td>Republicans</td>
                             <td><div class="data"><div class="bar"></div><span></span></div>
                         </tr>
                         <tr>
-                            <td>Scottish National Party</td>
+                            <td>Libertarians</td>
                             <td><div class="data"><div class="bar"></div><span></span></div>
                         </tr>
                         <tr>
-                            <td>Liberal Democrat</td>
-                            <td><div class="data"><div class="bar"></div><span></span></div>
-                        </tr>
-                        <tr>
-                            <td>Democratic Unionist Party</td>
-                            <td><div class="data"><div class="bar"></div><span></span></div>
-                        </tr>
-                        <tr>
-                            <td>Sinn Féin</td>
-                            <td><div class="data"><div class="bar"></div><span></span></div>
-                        </tr>
-                        <tr>
-                            <td>Plaid Cymru</td>
-                            <td><div class="data"><div class="bar"></div><span></span></div>
-                        </tr>
-                        <tr>
-                            <td>Green</td>
-                            <td><div class="data"><div class="bar"></div><span></span></div>
-                        </tr>
-                        <tr>
-                            <td>The Brexit Party</td>
+                            <td>Greens</td>
                             <td><div class="data"><div class="bar"></div><span></span></div>
                         </tr>
                         <tr>
@@ -137,41 +107,20 @@
                 <div class="table">
                     <h2>Vote Share</h2>
                     <table id="votesTable">
-                        
                         <tr>
-                            <td>Conservative</td>
+                            <td>Democrats</td>
                             <td><div class="data"><div class="bar"></div><span></span></div>
                         </tr>
                         <tr>
-                            <td>Labour</td>
+                            <td>Republicans</td>
                             <td><div class="data"><div class="bar"></div><span></span></div>
                         </tr>
                         <tr>
-                            <td>Scottish National Party</td>
+                            <td>Libertarians</td>
                             <td><div class="data"><div class="bar"></div><span></span></div>
                         </tr>
                         <tr>
-                            <td>Liberal Democrat</td>
-                            <td><div class="data"><div class="bar"></div><span></span></div>
-                        </tr>
-                        <tr>
-                            <td>Democratic Unionist Party</td>
-                            <td><div class="data"><div class="bar"></div><span></span></div>
-                        </tr>
-                        <tr>
-                            <td>Sinn Féin</td>
-                            <td><div class="data"><div class="bar"></div><span></span></div>
-                        </tr>
-                        <tr>
-                            <td>Plaid Cymru</td>
-                            <td><div class="data"><div class="bar"></div><span></span></div>
-                        </tr>
-                        <tr>
-                            <td>Green</td>
-                            <td><div class="data"><div class="bar"></div><span></span></div>
-                        </tr>
-                        <tr>
-                            <td>The Brexit Party</td>
+                            <td>Greens</td>
                             <td><div class="data"><div class="bar"></div><span></span></div>
                         </tr>
                         <tr>
